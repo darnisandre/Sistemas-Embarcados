@@ -1,0 +1,39 @@
+#include <prototypes.h>
+
+void task(void){
+	int32_t i, val,c=0;
+	uint8_t forked=0;
+
+	while(1){
+		printf("\nTask %d, c == %d", HF_CurrentTaskId(), c);
+		c++;
+		if ((forked == 0) && (c > 50)){
+			forked = 1;
+			val = HF_Fork();
+			
+			if (val > -1){
+				printf("\nHF_Fork() succeded!");
+			}else{
+				printf("\nHF_Fork() failed!");
+				for(;;);
+			}
+		}
+	}
+}
+
+void other_task(void){
+	int32_t c = 0;
+
+	while(1){
+		printf("\nTask %d, c == %d", HF_CurrentTaskId(), c);
+		c++;
+	}
+}
+
+void ApplicationMain(void){
+	HF_AddPeriodicTask(task, 5, 1, 5, "fork", 2048, 10, 0);
+	HF_AddPeriodicTask(other_task, 20, 2, 20, "other", 2048, 10, 0);
+
+	HF_Start();
+}
+

@@ -1,0 +1,19 @@
+set xlabel "Time (system ticks)"
+set ylabel "Tasks"
+set title "MPSoC Number of Tasks"
+set mxtics 1
+set mytics 1
+set pointsize 3.0
+plot \
+"./reports/plot0.txt" using 0:2 title "node 0" with lines, \
+"./reports/plot1.txt" using 0:2 title "node 1" with lines, \
+"./reports/plot2.txt" using 0:2 title "node 2" with lines, \
+"./reports/plot3.txt" using 0:2 title "node 3" with lines, \
+"./reports/plot4.txt" using 0:2 title "node 4" with lines, \
+"./reports/plot5.txt" using 0:2 title "node 5" with lines
+set term postscript eps enhanced
+set output "./reports/cputasks_3x2.eps"
+replot
+save "./reports/cputasks_3x2.plt"
+quit
+

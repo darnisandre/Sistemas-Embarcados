@@ -1,0 +1,46 @@
+set encoding utf8
+#set xlabel "Time (system ticks)"
+#set ylabel "Node Load (%)"
+set xlabel "Tempo (ticks)"
+set ylabel "Carga do Nodo (%)"
+#set title "MPSoC Processing Load"
+set mxtics 1
+set mytics 1
+set pointsize 1.0
+set samples 200
+set grid
+set key outside right
+#set yrange [0:110]
+
+set style line 1 lc rgb "#8B0000" lw 2 pt 1
+set style line 2 lc rgb "#00008B" lw 2 pt 2
+set style line 3 lc rgb "#556B2F" lw 2 pt 3
+set style line 4 lc rgb "#8B008B" lw 2 pt 4
+set style line 5 lc rgb "#006400" lw 2 pt 6
+set style line 6 lc rgb "#8B4513" lw 2 pt 8
+set style line 7 lc rgb "#FF8C00" lw 2 pt 10
+set style line 8 lc rgb "#B8860B" lw 2 pt 12
+set style line 9 lc rgb "#A9A9A9" lw 2 pt 12
+set style line 10 lc rgb "#9932CC" lw 2 pt 10
+set style line 11 lc rgb "#008B8B" lw 2 pt 8
+set style line 12 lc rgb "#E9967A" lw 2 pt 6
+set style line 13 lc rgb "#FF6347" lw 2 pt 4
+set style line 14 lc rgb "#483D8B" lw 2 pt 3
+set style line 15 lc rgb "#2F4F4F" lw 2 pt 2
+set style line 16 lc rgb "#00CED1" lw 2 pt 1
+
+set style increment user
+
+plot \
+"./reports/plot0.txt" using 0:3 smooth bezier title "n0" with linespoints pointinterval 4, \
+"./reports/plot1.txt" using 0:3 smooth bezier title "n1" with lines, \
+"./reports/plot2.txt" using 0:3 smooth bezier title "n2" with lines, \
+"./reports/plot3.txt" using 0:3 smooth bezier title "n3" with lines, \
+"./reports/plot4.txt" using 0:3 smooth bezier title "n4" with lines, \
+"./reports/plot5.txt" using 0:3 smooth bezier title "n5" with linespoints pointinterval 8
+set term postscript eps color
+set output "./reports/cpuload_3x2.eps"
+replot
+save "./reports/cpuload_3x2.plt"
+quit
+

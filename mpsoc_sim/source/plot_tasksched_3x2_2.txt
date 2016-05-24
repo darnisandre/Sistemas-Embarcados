@@ -1,0 +1,19 @@
+set xlabel "Time (system ticks)"
+set ylabel "Scheduled Task"
+set title "Task Scheduling"
+set mxtics 1
+set mytics 1
+set pointsize 1.0
+set size ratio -1
+set grid
+set xrange [0:50]
+set style line 1 lt 3 lw 2 pt 5 ps 2.0
+set style function lines
+plot \
+"./reports/sched2.txt" using 1:2 notitle with points ls 1
+set term postscript eps color
+set output "./reports/tasksched_3x2_2.eps"
+replot
+save "./reports/tasksched_3x2_2.plt"
+quit
+

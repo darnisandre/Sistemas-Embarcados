@@ -1,0 +1,4 @@
+title HellFire (x86 Alpha)
+kernel /boot/hellfire_x86.bin
+boot
+

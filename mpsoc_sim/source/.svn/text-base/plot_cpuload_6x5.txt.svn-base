@@ -1,0 +1,87 @@
+set encoding utf8
+#set xlabel "Time (system ticks)"
+#set ylabel "Node Load (%)"
+set xlabel "Tempo (ticks)"
+set ylabel "Carga do Nodo (%)"
+#set title "MPSoC Processing Load"
+set mxtics 1
+set mytics 1
+set pointsize 1.0
+set samples 200
+set grid
+set key outside right
+set yrange [0:130]
+
+set style line 1 lc rgb "#8B0000" lw 2 pt 1
+set style line 2 lc rgb "#00008B" lw 2 pt 2
+set style line 3 lc rgb "#556B2F" lw 2 pt 3
+set style line 4 lc rgb "#8B008B" lw 2 pt 4
+set style line 5 lc rgb "#006400" lw 2 pt 6
+set style line 6 lc rgb "#8B4513" lw 2 pt 8
+set style line 7 lc rgb "#FF8C00" lw 2 pt 10
+set style line 8 lc rgb "#B8860B" lw 2 pt 12
+set style line 9 lc rgb "#A9A9A9" lw 2 pt 12
+set style line 10 lc rgb "#9932CC" lw 2 pt 10
+set style line 11 lc rgb "#008B8B" lw 2 pt 8
+set style line 12 lc rgb "#E9967A" lw 2 pt 6
+set style line 13 lc rgb "#FF6347" lw 2 pt 4
+set style line 14 lc rgb "#483D8B" lw 2 pt 3
+set style line 15 lc rgb "#2F4F4F" lw 2 pt 2
+set style line 16 lc rgb "#00CED1" lw 2 pt 1
+
+set style line 17 lc rgb "#8B0000" lw 2 pt 12
+set style line 18 lc rgb "#00008B" lw 2 pt 10
+set style line 19 lc rgb "#556B2F" lw 2 pt 8
+set style line 20 lc rgb "#8B008B" lw 2 pt 6
+set style line 21 lc rgb "#006400" lw 2 pt 4
+set style line 22 lc rgb "#8B4513" lw 2 pt 3
+set style line 23 lc rgb "#FF8C00" lw 2 pt 2
+set style line 24 lc rgb "#B8860B" lw 2 pt 1
+set style line 25 lc rgb "#A9A9A9" lw 2 pt 1
+set style line 26 lc rgb "#9932CC" lw 2 pt 2
+set style line 27 lc rgb "#008B8B" lw 2 pt 3
+set style line 28 lc rgb "#E9967A" lw 2 pt 4
+set style line 29 lc rgb "#FF6347" lw 2 pt 6
+set style line 30 lc rgb "#483D8B" lw 2 pt 8
+set style line 31 lc rgb "#2F4F4F" lw 2 pt 10
+set style line 32 lc rgb "#00CED1" lw 2 pt 12
+
+set style increment user
+
+plot \
+"./reports/plot0.txt" using 0:3 smooth bezier title "n0" with lines, \
+"./reports/plot1.txt" using 0:3 smooth bezier title "n1" with lines, \
+"./reports/plot2.txt" using 0:3 smooth bezier title "n2" with lines, \
+"./reports/plot3.txt" using 0:3 smooth bezier title "n3" with lines, \
+"./reports/plot4.txt" using 0:3 smooth bezier title "n4" with lines, \
+"./reports/plot5.txt" using 0:3 smooth bezier title "n5" with lines, \
+"./reports/plot6.txt" using 0:3 smooth bezier title "n6" with lines, \
+"./reports/plot7.txt" using 0:3 smooth bezier title "n7" with linespoints pointinterval 4, \
+"./reports/plot8.txt" using 0:3 smooth bezier title "n8" with lines, \
+"./reports/plot9.txt" using 0:3 smooth bezier title "n9" with lines, \
+"./reports/plot10.txt" using 0:3 smooth bezier title "n10" with linespoints pointinterval 8, \
+"./reports/plot11.txt" using 0:3 smooth bezier title "n11" with lines, \
+"./reports/plot12.txt" using 0:3 smooth bezier title "n12" with lines, \
+"./reports/plot13.txt" using 0:3 smooth bezier title "n13" with lines, \
+"./reports/plot14.txt" using 0:3 smooth bezier title "n14" with lines, \
+"./reports/plot15.txt" using 0:3 smooth bezier title "n15" with lines, \
+"./reports/plot16.txt" using 0:3 smooth bezier title "n16" with lines, \
+"./reports/plot17.txt" using 0:3 smooth bezier title "n17" with lines, \
+"./reports/plot18.txt" using 0:3 smooth bezier title "n18" with lines, \
+"./reports/plot19.txt" using 0:3 smooth bezier title "n19" with lines, \
+"./reports/plot20.txt" using 0:3 smooth bezier title "n20" with lines, \
+"./reports/plot21.txt" using 0:3 smooth bezier title "n21" with lines, \
+"./reports/plot22.txt" using 0:3 smooth bezier title "n22" with lines, \
+"./reports/plot23.txt" using 0:3 smooth bezier title "n23" with lines, \
+"./reports/plot24.txt" using 0:3 smooth bezier title "n24" with linespoints pointinterval 12, \
+"./reports/plot25.txt" using 0:3 smooth bezier title "n25" with lines, \
+"./reports/plot26.txt" using 0:3 smooth bezier title "n26" with lines, \
+"./reports/plot27.txt" using 0:3 smooth bezier title "n27" with lines, \
+"./reports/plot28.txt" using 0:3 smooth bezier title "n28" with lines, \
+"./reports/plot29.txt" using 0:3 smooth bezier title "n29" with linespoints pointinterval 16
+set term postscript eps color
+set output "./reports/cpuload_6x5.eps"
+replot
+save "./reports/cpuload_6x5.plt"
+quit
+
