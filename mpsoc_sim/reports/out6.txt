@@ -1,0 +1,35 @@
+
+===========================================================
+HellfireOS RT Lite v1.61
+May 29 2016, 01:05:49 (gcc 4.6.1)
+Embedded Systems Group - GSE, PUCRS - [2007 - 2015]
+===========================================================
+CPU ID:                6
+Architecture:          Plasma CPU
+Clock frequency:       25000 kHz
+System tick time:      10485 us
+TCB entry size:        256 bytes
+TCB size:              5120 bytes
+Heap size:             524288 bytes
+Packet buffer size:    2048 flits in sw FIFOs (each task), 64 flits in / out hw FIFOs
+Maximum tasks:         20
+Memory info
+    .text              21040 bytes (10000000 - 10005230)
+    .data              18664 bytes (10005230 - 10009b18)
+    .bss               530116 bytes (10009b18 - 1008b1dc)
+System memory usage:   569820 bytes
+KERNEL: initializing...
+KERNEL: [Idle Task] (BE), id: 0, niceness: 128, addr: 10003900, sp: 1000a1c0, ss: 1024 bytes
+KERNEL: [System Monitor] (BE), id: 1, niceness: 128, addr: 10004b5c, sp: 1000ba50, ss: 2048 bytes
+KERNEL: [slave] (BE), id: 2, niceness: 10, addr: 10005168, sp: 1000d2e0, ss: 2048 bytes
+KERNEL: free heap: 506444 bytes
+KERNEL: timer driver registered
+KERNEL: network interface driver registered
+KERNEL: hellfire is up and running!
+KERNEL: Idle task
+
+msg: ^`aba`h…—£©¨¦ŸmPMW]bddedikmqmnÕbceca_f…˜¤¦§© ŽnOPY_ceeiefonqn‰Ðddebcal†–¢§ª¨£qOPY^dffdcdiloe›½dbcccan‡š¤ª«¬¥pQO\]dcceceili^µ³cdebdbn†›¥«­­§‘qPN\\bebcbcgigWÏ³ebbabdm…š¨­®®¦pOMY_acbbadeie\Ú·`cbac_i…™¦­¬­¦sRP[^bdaecahhdcÚ³ab`a`aj‡©«­«¥‘qQO\`dcbcbdefdaÔ²c^_^_al‰œ§«««¥“qQO\_bcaabbfd_kÎ°a_^_]`n‰œ¨«ª«§’sRQ[`caacadcd[}Æ¶_bb_bfq‰›¨­­«¥”uQMY_aa^caccaX†Ì¾cb`bcipŠ›©¬«¬¨•rPJY_aa`bbad`WƒÏÂbbdadgvŒœ©¬®­§•tNLU^abbdccd`T}ÑÃcfdbeltžª­­­§–wMKV^`baeabeb\dÖÄdgf`gkv‹««­¬¨•tPNX``caebdc`[LÔËihebdjt‹›©­¬¬¨—uRKY^`a`eacbaaO¶Èjhhedgt‹›¨ª«ª§—wPLU]_bbbbccdcV„ÏlihfffrŠœ¨¬««¨•yPLZ^_`bdbbbef\]Ökjidden‡ª««¬©–{MIV[___ab`bgieV§kligc`j†›¨­­­¨—yMKT\^baab`ehjhaXkmggc_f…›ª¬¬¯ª—xOIT[_`_bacfimniZkiiec\c‚™§¬«®«˜|NJP[`baaaafhnok`kijec[aƒ™§¬®®ª˜{OIX\badcbaejqrldgiged]c‚™¨­­¬©š|SJT^addebdhkmsoiggifc^aƒš¦¬­®¬˜~SJS\bfefedeo…rqniieec\d‚˜¨¬®­«—}VNVaffgfddf|ptstihde]\_€˜¨®¯®«˜|TP\^beehffiwqvwxffeac[`‚–©®®°ªš{SNX_eehifglnusqpfdbb`\_‚š¨¬¯¯¬˜{TKW^ddgggejoswxweedcb^^˜§¯°°ªš|TNW]chefdhkpvwv˜gefdd^\˜¨­°±¬š~ROX_chcfeejpsw“dfjfb[\—§¯®±¯›SPY`feeebegkm€œ
+
+
+msg: [fnpqpnkfcbejmlib\XWX[\]\[YYXY\enx~€‚‚‚€}yxwxxvrmjiijkllmlmmmoty†ŠŒŽ‰…ƒ|xuuuwxxxxxyz{|‚‡ŠŽ’•——•‹ˆ„~zxy{}€€‚„†‰ŒŽ’–˜˜•‘‹‡„€}zxy{}€€‚ƒ†ˆ‹ŒŽŽ’•˜˜–‘Œˆ„€}ywxz|~€‚ƒ…‡‰‹ŒŽ’•˜˜–’Œˆ„€|ywxz|~~~~€‚ƒ…‡‰‹‘”——–‘Œˆ„€|ywwy|~€‚‚ƒ„†‰‹‘”—˜–’ˆ„€|xvwy{}~€‚‚„‡ŠŒŽ“–˜—“Ž‰„€|xvvxz}~€€‚†‰ŒŽ“–˜˜”‰„€{xvvwz}~~€~}€„ˆ‹’•˜˜•‰„€{xuuwz}~€€~}ƒˆ‹’•˜˜•Š„€{wuuwz}€€~||~ƒˆ‹‘•˜™–‘‹…{wuuwz}€€€~{{~ƒˆŒ‘•˜™—“Œ†€{wuuwz|~€€|zy}‚‡‹Ž”—™—“Œ†€{wutvy|€€‚‚€}zz}ƒˆ‹Ž”˜š˜”†€{wuuwz}€~{yy|‚ˆ‹Ž”—š™•Ž‡€{wutvy|€€}zxy}ƒˆ‹Ž“—šš–ˆ{wutvy|~€€~{wvw{‚‡ŠŒ’–™™–ˆ{wutvy|~€‚{wvw|ƒˆ‹ŒŽ’–™™–ˆ|wutvy|€€}yutv{‚‡‹ŒŽ‘•™š—‘‰‚{wtsux{~€|yutw|‚‡‹ŒŽ‘•™š˜’‹ƒ|wtstw{~€€€}zvssv{‚‡ŠŒŒ”—™—’Šƒ|wtstw{~€€~zwttw|ƒˆ‹ŒŒ”˜™˜“‹ƒ|wtstw{~€€|xtrsv|‚ˆ‹ŒŒ“—™˜”Œ„}wtstwz}~{wtrrw|ƒˆ‹ŒŒ“—š™•Ž…}wtstwz|~~|xtqoqu{‚‡ŠŒŒ’–™™•Ž…}wtstvy|~~|yurqsw|ƒˆ‹ŒŒ’–™™–†~xtsuwz|~}zvspoqu|‚ˆ‹’•™™–‡xtstvy|}|yurpprv|ƒˆŒ‘•™š˜‘‰€ytstvy{|zvronnqu{‚ˆ‹Ž”—™—‘ˆxtstvy{|zvrpppsw}
+msg: ,1--3Wa–¤­­°²¡„OS‘t'PA=@9/,v‡PF34+)0ORx“¤®­­¯Ÿ}q³Iv.@D?@:-+moJ=>4..DGsŽ£««­®™£G;^'8R<<K@1W~ZoUC78>6[†¢«ªª¯°¡MM~:)*O=,B[A7_p]†gNI<1R‚ ©«ª³¥ˆW}v))*2j1sSA'p{‡Œˆq]I+O‚¡©ª¬­¡ƒžx:+(#WyNlYO8IRL–ŒuP-Mƒ£®­¬°¡”½X>.-,?+SI@?Wa#|p‡–—Žf0Mƒ¢±®®°¡˜›ˆ+85F7A1K:)9.]=t¤z2J…£²¯±±¡›‹=)+.798..i>07F4'R§¤‡7B‡¤±±²±¢Ž‘V#-.K,515r54%U.":Š©¨28‡¢²°°³¦yI-*86-1,9t-D&-V#6€¨ª‹.9…¤³±²µ§ŠI2/:2+4.Vo"I/0: (z¢«Ž16ƒ¤³²²´§ˆ.3:-,,+&€e(4;42'o¦­‘83‚¤³±´´¨‘s2<,.,.(jUL)0G0$#o ¬“F3€¤±­¬®¢“z82--14J.PS.2C+,$b¢­›G2}¥²°¯²¦“€:.0,2216BM0=23/#%Tš­›M6|¢°±²³¨’{06+*20B.>>9-5<(&#K–«›Y9z ±°°²¦”Ž@0)*>P1,>:392A,&$@‘§œf<wŸ¯®°²§Ž“M1+>=0/.?>9?:92%#A¨¡f@už®°°³§Ž€M7*33.1<=3J7,5)""3®©w8qš«®°³©”vP;.5--<3?3@=0*2'!,­¬ˆ;n›«¯°´ª“gX73*)8>,A1@A<*36??ˆ±³Apš«°®µ¬ˆpF/1.546.:3@:78+ZVZ¯¶•On™¬°¯¸¬ƒuO*4=1.225@7A=,,W]jŒ

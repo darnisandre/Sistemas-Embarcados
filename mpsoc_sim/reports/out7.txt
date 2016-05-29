@@ -1,0 +1,35 @@
+
+===========================================================
+HellfireOS RT Lite v1.61
+May 29 2016, 01:05:51 (gcc 4.6.1)
+Embedded Systems Group - GSE, PUCRS - [2007 - 2015]
+===========================================================
+CPU ID:                7
+Architecture:          Plasma CPU
+Clock frequency:       25000 kHz
+System tick time:      10485 us
+TCB entry size:        256 bytes
+TCB size:              5120 bytes
+Heap size:             524288 bytes
+Packet buffer size:    2048 flits in sw FIFOs (each task), 64 flits in / out hw FIFOs
+Maximum tasks:         20
+Memory info
+    .text              21040 bytes (10000000 - 10005230)
+    .data              18664 bytes (10005230 - 10009b18)
+    .bss               530116 bytes (10009b18 - 1008b1dc)
+System memory usage:   569820 bytes
+KERNEL: initializing...
+KERNEL: [Idle Task] (BE), id: 0, niceness: 128, addr: 10003900, sp: 1000a1c0, ss: 1024 bytes
+KERNEL: [System Monitor] (BE), id: 1, niceness: 128, addr: 10004b5c, sp: 1000ba50, ss: 2048 bytes
+KERNEL: [slave] (BE), id: 2, niceness: 10, addr: 10005168, sp: 1000d2e0, ss: 2048 bytes
+KERNEL: free heap: 506444 bytes
+KERNEL: timer driver registered
+KERNEL: network interface driver registered
+KERNEL: hellfire is up and running!
+KERNEL: Idle task
+
+msg: ›dfldht}|xxz„†…nz§§¤£¦¤µ¶®·¼··»³ƒf_emrpqsx{€~{l{¢›•§¢­®³¼­´µµ©®ndiidkxs|vxn€›”””˜­­´«ª´²³§­¹†qkiihkjxvs|q”“—‰›¤£°©¦«³²š´­®vfjhnmqvtq…“˜Š”˜£¡œ©´ª ¤²«±®”xmhlonz|u~•‰”€””—™˜ª¬¨Ÿ¨­«®¬®™Œrjjkpwi„‘‹y“–›‰Ÿ¢¨–­²§¦¯±® ‘Œ}m^gvk‡ŒŒt’—’‘™—Œ’­¬£©©£«  —Š…iamf€…Šƒt’’œ—¥®£££ª¢šŠ‰xkb~‡‰|v„Š˜Œ“¡šœ–Ÿ§§˜­£“awŒ~‡}yˆŠ~‚š‰¡œ‹–›‹„vy£¬¢›™p|~ƒ|vˆˆ‰{…‘†˜Œfughm›Ÿu~»¨“”oxxyr†Œ‡ƒy‚†„‹’zynYOJ ¢„{Æ¨‚„yosxi‚‰…ƒ~ƒ„…ƒ‹mŒzqjyh`k^AÈ¬z…Œxti|‹ˆy†ƒ}Œ‡r…rzcL??UoddÇ«†‘…es‡‡‚w}†€~ˆmƒ…lONP<6Fof9VÂ¼›ˆŒtoˆ†q€~vŠˆ‹t„Q<XA31/si5:cÇÄ§¡h€ˆ…k||x…|htuDGQ80>'MX<<kiÒ¾¥°i€€€jwz‚…PKMKTB,`&0X57OBRÑÆ¹´z}ƒuyƒ…~x…xrdVE]2'Ac&9S.62@>’ÏÀ¦Štts{r{zoIHP]P7,KK5C38JLQD}ÛÊ¸z~j{yv„ƒrtgF<5QI>4@\M+/02+6a{Û×ˆnwzvnˆ†}dB7M-.CHX/AHw..+(%h_iŞÎgjqsts|uc'R.-01NE=J-rLD$yu–aÇ¶mxloƒ{aLCH-Y)97/5@9SCX<$i™­nŠÈpov|ƒlO3.*O-<733:2[`IhXŠ•¯µup½vo„€…jA5Z%)R8=464B+IE!n=…©®½nƒmnˆ€r>E!R</'GR)4D76-ZB‹{§ ©¼x†‹˜zƒvi4S i)-MZ7)3H&SC0&~c¯§¤¤¾˜<(_Ÿui8W94h'357)06<8IC(en«©º¤À4%‰VM@[&Ud":AC50'LR=->‡—©¸½™µÄ˜eQztI5`AQ?^+?*5X$,,H7‡ˆ°³Ä«©Åz
+
+
+msg: [fnpqpnkfcbejmlib\XWX[\]\[YYXY\enx~€‚‚‚€}yxwxxvrmjiijkllmlmmmoty†ŠŒ‰…ƒ|xuuuwxxxxxyz{|‚‡Š’•——•‹ˆ„~zxy{}€€‚„†‰Œ’–˜˜•‘‹‡„€}zxy{}€€‚ƒ†ˆ‹Œ’•˜˜–‘Œˆ„€}ywxz|~€‚ƒ…‡‰‹Œ’•˜˜–’Œˆ„€|ywxz|~~~~€‚ƒ…‡‰‹‘”——–‘Œˆ„€|ywwy|~€‚‚ƒ„†‰‹‘”—˜–’ˆ„€|xvwy{}~€‚‚„‡ŠŒ“–˜—“‰„€|xvvxz}~€€‚†‰Œ“–˜˜”‰„€{xvvwz}~~€~}€„ˆ‹’•˜˜•‰„€{xuuwz}~€€~}ƒˆ‹’•˜˜•Š„€{wuuwz}€€~||~ƒˆ‹‘•˜™–‘‹…{wuuwz}€€€~{{~ƒˆŒ‘•˜™—“Œ†€{wuuwz|~€€|zy}‚‡‹”—™—“Œ†€{wutvy|€€‚‚€}zz}ƒˆ‹”˜š˜”†€{wuuwz}€~{yy|‚ˆ‹”—š™•‡€{wutvy|€€}zxy}ƒˆ‹“—šš–ˆ{wutvy|~€€~{wvw{‚‡ŠŒ’–™™–ˆ{wutvy|~€‚{wvw|ƒˆ‹Œ’–™™–ˆ|wutvy|€€}yutv{‚‡‹Œ‘•™š—‘‰‚{wtsux{~€|yutw|‚‡‹Œ‘•™š˜’‹ƒ|wtstw{~€€€}zvssv{‚‡ŠŒŒ”—™—’Šƒ|wtstw{~€€~zwttw|ƒˆ‹ŒŒ”˜™˜“‹ƒ|wtstw{~€€|xtrsv|‚ˆ‹ŒŒ“—™˜”Œ„}wtstwz}~{wtrrw|ƒˆ‹ŒŒ“—š™•…}wtstwz|~~|xtqoqu{‚‡ŠŒŒ’–™™•…}wtstvy|~~|yurqsw|ƒˆ‹ŒŒ’–™™–†~xtsuwz|~}zvspoqu|‚ˆ‹’•™™–‡xtstvy|}|yurpprv|ƒˆŒ‘•™š˜‘‰€ytstvy{|zvronnqu{‚ˆ‹”—™—‘ˆxtstvy{|zvrpppsw}
+msg: hnop–Š˜z,344BH*A1252.5<=A8DL;>CH=dth‰‰Cƒ(.1AI&A0061/399<5:LUlxƒ6t”Ta}dL˜ˆ+4EI-G2443155=:54Qbx}t“[Zgo_Š_k/>A+K/107212>:82Ngx{}Z|Fnjwrz‡>}?==%K12/98158D<4Ddqy{vDPUyzŒ€On;}86,N5516?62<AH6Ectv~3DBaa„™Jr[?-*I5445A23BE^4Abs~xFBJUbl‰z^“?z//K>658C85HGlB8gysy_>MHdi{†“wCv&F<203A5+BNwP3an…NYRaJkev›„#h¬ "C@1.2I429[wV+\wƒ„W<TihQ[—’V=iÁ"!DL//3?/48elZ-`y~1?MdcPZ‘‡|(X§)LN432A,2Eekf/b{‚‚1.GVt?N‘”kn‚zn*FD581476Ru|k3d|„†8-D<|Sk‹ˆ¥M997<8:814Fm|za?d|‚ˆ:0P1:p…ˆk_†”|gE37H790:Lt}|YBi€„…52_3'_w€vL+;?>iqsM670D\{~€QNp‚††7/W5XZptl2L21>97T9.5Pe|€€A_z„‡Š9F<^2uxKcxTD738926-@Voz~u;b‡Œ‹4M.XE4GzCB}¦;6*:10//Gfs}{]Dm„ˆŠC05dm>*CRM]o'6,2.(1<Qnu|{?Q†ˆŠŒ.EMd†ZB;=p?L/)1.,(6Lbvtx`5f„††‹8.*Op‡heo<,16,-)),=Wovvq,L{†‡ˆŠŒ,:4*R~d^g%5*/,)(2Jcrtx>3nƒˆˆ‰‰Š10D5(V‡‰Z|+.+*(',GUpuzH.Y€…†‡ŒŠ‹4:;=

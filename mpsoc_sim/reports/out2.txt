@@ -1,0 +1,35 @@
+
+===========================================================
+HellfireOS RT Lite v1.61
+May 29 2016, 01:05:41 (gcc 4.6.1)
+Embedded Systems Group - GSE, PUCRS - [2007 - 2015]
+===========================================================
+CPU ID:                2
+Architecture:          Plasma CPU
+Clock frequency:       25000 kHz
+System tick time:      10485 us
+TCB entry size:        256 bytes
+TCB size:              5120 bytes
+Heap size:             524288 bytes
+Packet buffer size:    2048 flits in sw FIFOs (each task), 64 flits in / out hw FIFOs
+Maximum tasks:         20
+Memory info
+    .text              21040 bytes (10000000 - 10005230)
+    .data              18664 bytes (10005230 - 10009b18)
+    .bss               530116 bytes (10009b18 - 1008b1dc)
+System memory usage:   569820 bytes
+KERNEL: initializing...
+KERNEL: [Idle Task] (BE), id: 0, niceness: 128, addr: 10003900, sp: 1000a1c0, ss: 1024 bytes
+KERNEL: [System Monitor] (BE), id: 1, niceness: 128, addr: 10004b5c, sp: 1000ba50, ss: 2048 bytes
+KERNEL: [slave] (BE), id: 2, niceness: 10, addr: 10005168, sp: 1000d2e0, ss: 2048 bytes
+KERNEL: free heap: 506444 bytes
+KERNEL: timer driver registered
+KERNEL: network interface driver registered
+KERNEL: hellfire is up and running!
+KERNEL: Idle task
+
+msg: ¢ ¢žŸ›™›œ£§¬«¥”v^`hikljmmipvw{~€ŸŸ¡šœ™šš›¡¨­¬£t]]ckhigjjioux||}œšžœ››™šš¤ª«©Ÿ‹t[Zddhhighjnsxz|~œœ›™›¢§ª¨¦‰r\\bgjkigghosuz|~œ›œ›™Ÿ¥¦§¥¤š‹t[[bdjkgifgpsxz|}œ›žœ™ §¤¥¢¡š‹x\\bflhgfhgprvx{|šœŸžžž¤§¦¢Ÿ œŒqZW`fiiiffjmqyyz~žžŸŸŸ ¤¨§¤Ÿ¢Ÿ‹rZXcfihhggjlrwz{|žœŸ ¡¢¨©§£ ž¢ŒqZ\ceijgfegnruyy|ŸŸ¢¡¤¨¦¥¤ Ÿ¡œŠrVVbeheefhgnqtxv|¡¡¡¢¨¦¡ Ÿ Ÿ ¡›‰oVX`hfhgfdhmpxxxz¡¡¡¦¨žš˜š¢¢ ¢œŒpVX`egjfgfhnswyz{¡ ¢ª¦˜‘‘—£¢ ¤ŒrXW`cgidhgjqpwyy| ¡¦¨ž‘…Š˜££¢¤žŒqUV]dhfgfhjptxzx} ¤¬£–ƒyŠ›¤¦£¥ŽoQR^abecehinrvxx{¢ª©œnl‹œ§¦¤¥žŽrSQY^c`bdfhmputyw©®£•{Wi‹ž¦¦¤¤žpOMV^_`bcfhkksutu«©œ‰cKi‰œ§§¤¤œ‰pMMX]decbeglmtnsv¬¢•wQNl‰ž¨§¥£›ŠoLMY_cfdbcdjmqtru¦›‡]UPl‰§©¦¡œ‹nLOWaebbcefjnruqu rQSTmŒ¦§¦¤›ˆlNMZ_abdbegkoprty–€YUXWlˆœ§©¦¤™ˆnPP[^bccideinsrtv‰eTXXUlŠš¥¨¥¥™ˆmON[``eefdemlqtsyuUZ[YUj‰š£©¥¤œ†jPP\abbbcdhimrttv\UZ\ZUj†™£¦¦£œ‡oNO\`dbacegimrwswWZ[ZZWhˆ™£¥¦¥›‡oQMX_ccdcfejnquvvU\]][Ykˆ˜¡¤¥¡›ŠkRNZ__cfcceimptur[\\ZZWjˆ™¡¦£¤ŠnQOW\cbcfcflmrsrm^Z\ZWSf‰˜¢¥££ž‰rQOX_]bbeckkmprnjZZYYZTc…™£¤¤£œŠmLLVX]`_^cfhjmnfXZ^]\Wg„—£§¥¢ˆlJHQ\_bbbcdiipod¶\\]_^Xfƒ—¦§¦¦›ŠlLKR]ccddeehmpsdÐ
+
+
+msg: [fnpqpnkfcbejmlib\XWX[\]\ZYYXY\enx~€‚‚‚€}yxwxxvrmjiijklllllmmoty†ŠŒŽ‰…ƒ|xuuuwxxxxxyz{|‚‡ŠŽ’•——•‹ˆ„~zxy{}€€‚„†‰ŒŽ’–˜˜•‘‹‡„€}zxy{}€€‚ƒ†ˆ‹ŒŽŽ’•˜˜–‘Œˆ„€}ywxz|~€‚ƒ…‡‰‹ŒŽ’•˜˜–’Œˆ„€|ywxz|~~~~€‚ƒ…‡‰‹‘”——–‘Œˆ„€|ywwy|~€‚‚ƒ„†‰‹‘”—˜–’ˆ„€|xvwy{}~€‚‚„‡ŠŒŽ“–˜—“Ž‰„€|xvvxz}~€€‚†‰ŒŽ“–˜˜”‰„€{xvvwz}~~€~}€„ˆ‹’•˜˜•‰„€{xuuwz}~€€~}ƒˆ‹’•˜˜•Š„€{wuuwz}€€~||~ƒˆ‹‘•˜™–‘‹…{wuuwz}€€€~{{~ƒˆŒ‘•˜™—“Œ†€{wuuwz|~€€|zy}‚‡‹Ž”—™—“Œ†€{wutvy|€€‚‚€}zz}ƒˆ‹Ž”˜š˜”†€{wuuwz}€~{yy|‚ˆ‹Ž”—š™•Ž‡€{wutvy|€€}zxy}ƒˆ‹Ž“—šš–ˆ{wutvy|~€€~{wvw{‚‡ŠŒ’–™™–ˆ{wutvy|~€‚{wvw|ƒˆ‹ŒŽ’–™™–ˆ|wutvy|€€}yutv{‚‡‹ŒŽ‘•™š—‘‰‚{wtsux{~€|yutw|‚‡‹ŒŽ‘•™š˜’‹ƒ|wtstw{~€€€}zvssv{‚‡ŠŒŒ”—™—’Šƒ|wtstw{~€€~zwttw|ƒˆ‹ŒŒ”˜™˜“‹ƒ|wtstw{~€€|xtrsv|‚ˆ‹ŒŒ“—™˜”Œ„}wtstwz}~{wtrrw|ƒˆ‹ŒŒ“—š™•Ž…}wtstwz|~~|xtqoqu{‚‡ŠŒŒ’–™™•Ž…}wtstvy|~~|yurqsw|ƒˆ‹ŒŒ’–™™–†~xtsuwz|~}zvspoqu|‚ˆ‹’•™™–‡xtstvy|}|yurpprv|ƒˆŒ‘•™š˜‘‰€ytstvy{|zvronnqu{‚ˆ‹Ž”—™—‘ˆxtstvy{|zvrpppsw}
+msg: cffcaYX€—¨±°°«œ€ULU^efccbabt‘™˜`_a\\RS{–©¯±±«™€SIVX_e`a`Yi¶¬Ž•”c``\WPO}–«±°²¯˜QMY`bbad]YlÀ˜Ž—zcab^ZOLy—©±²µ¯š~WP[chfghhG4¤Åœ@dcb]ZOKz—©²³´±œZU^fkloC1_ƒ¯À·?@ggf[VNJx—©±µ¶³ŸYUbhnn~(pž‘v7-bfd`XTLFw–©²´·´Ÿ„YR_gnlzŽ›‹VCS)00c\ZRQC=t•§±µ·´Ÿ„YS]gnmoŒu^H^7+J[\\VSN@Ap“¨±³µ² ƒZQ^cjrž…~D=@ZuWYQPIA=s”¨°²¶²žƒVQZm‰‡ƒV=H;>UYnQOMLI><q“§°³´±ƒZQ]hktuTZZR7eDqtNJLHD;<n”¥­®±®Ÿ„WQ^dio_„oVXlC9MnNKLID99p”¤¯¬±­›„VI|\u‘„9R€g9QG_yOLMH@73n’¦­¬®­œ„SIo†tbD€ZR:[avPNKK?3/l‘¥®°±¯ž„VKVludHXbJXfE\SPNG>3-k‘§®¯±± „UPsktMQ\bO;t2hTQNIA97p‘¦¬­±± …d^\bluIQm^3fV2lkQNNKDAG|˜¥®­±°¢†ZLZdmiUSfP,CIggONJLBHXƒš¥©ª°´ ˆ\KZbso3QJ+p@TMgdPIRKDDa‡œ¥ª­±²£Š[M[bo4NFpI0KMfuJHHJ?Aa‰¦ª«²²£ˆ]JWaŒq?H|9=4HEKjGFDE?H[„š¥ª­°³£‰ZIU‚iy>cb1GB>QCYC=DD@EY†¦¬­²³¤‰[Hqkfq9QQ8DBL\QN9:>C=G[ˆž©®±³²¤‡XXzWƒp2AD>F6GxgZ79=@

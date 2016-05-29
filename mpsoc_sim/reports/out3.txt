@@ -1,0 +1,35 @@
+
+===========================================================
+HellfireOS RT Lite v1.61
+May 29 2016, 01:05:44 (gcc 4.6.1)
+Embedded Systems Group - GSE, PUCRS - [2007 - 2015]
+===========================================================
+CPU ID:                3
+Architecture:          Plasma CPU
+Clock frequency:       25000 kHz
+System tick time:      10485 us
+TCB entry size:        256 bytes
+TCB size:              5120 bytes
+Heap size:             524288 bytes
+Packet buffer size:    2048 flits in sw FIFOs (each task), 64 flits in / out hw FIFOs
+Maximum tasks:         20
+Memory info
+    .text              21040 bytes (10000000 - 10005230)
+    .data              18664 bytes (10005230 - 10009b18)
+    .bss               530116 bytes (10009b18 - 1008b1dc)
+System memory usage:   569820 bytes
+KERNEL: initializing...
+KERNEL: [Idle Task] (BE), id: 0, niceness: 128, addr: 10003900, sp: 1000a1c0, ss: 1024 bytes
+KERNEL: [System Monitor] (BE), id: 1, niceness: 128, addr: 10004b5c, sp: 1000ba50, ss: 2048 bytes
+KERNEL: [slave] (BE), id: 2, niceness: 10, addr: 10005168, sp: 1000d2e0, ss: 2048 bytes
+KERNEL: free heap: 506444 bytes
+KERNEL: timer driver registered
+KERNEL: network interface driver registered
+KERNEL: hellfire is up and running!
+KERNEL: Idle task
+
+msg: ƒ€‡€ƒ‡ƒ……„†„‡ƒ‡ˆ‡†‡„ƒ„„„ƒ†‡ƒ„‚„‚‚€…„‡…†…ƒƒƒ………„†ƒ‚‚ƒƒ‚ƒ…„‚ƒ€‚‚ƒ‚†…„…ƒ„„„ƒƒƒ‚€€‚ƒ€‚„‚}€‚ƒƒ‚€„ƒ……ƒƒ„ƒƒƒ„ƒ„ƒ‚ƒ‚€ƒ†…‚„€ƒ‚„ƒ‚ƒƒ……†ƒƒ„‚†ƒ…„„…‚„€‚†ˆƒƒ€‚‚‚‚„‚„‚ƒƒƒ‚‚‚‚ƒ„†…‚}‚„‚€„‡ƒ€~}}~~~€~„ƒ~~€‚‚‚‚‚€~„…„}y{|€}}}}€€‚}€~ƒ‚€ƒ‚ƒ€„€{{yx}{|{}€{}€}|~€€‚„€€~|}zz}{xxz|€{{~}}}}€€€€€€~|zuvvwux}~}}~}}~|„„€~~„}|~‡ƒ‡ž¡œ’utz}}~~€€€€€ƒ€{…“—“ ¤ª²±¶µ·¹‚~~|€~€~~Ž˜Œ—¦¤«²³®ªµ´¼Â|z|}{{ˆŽ‹{„Ž“—’š¦¦±¯¯³¹¸¿y|{}}~|€€–ƒ}z|‡ƒŒ˜˜¡¡©§´²·¸¸½}{z|||w£gzzwyy…†ˆŠ”™š©­°º¹¶½ºxw|||}wowyy}w†„Š‚ŠŒ– ©°±°·´¼Àywz{{z“ptoqu||†‰„ˆŒŽ‘š£¤®¶µ¾¾Àww{x|‹voknwtwy„€…‰…‹Š’“ ©´·»¹¹¿x{zy~mnovvw{yz|}…ƒ†„ˆ—ª¸·º¹¹¿xx||€ljovszxxvw‚Š‰ˆ‡Š—œ©µµ¹À´«yyy€nklrpxuxqv|}ƒ‰ˆ‰Œ“’›¢±²·Ÿ­Ìyz}tjqprwvqmr}€ˆŠŽŽ”Š‹‘˜§¯¥™ÅÎÈyz~qtoosvrwww‚Š‡ŽŒŠ‹’˜ª‹§ÆËÈÎwƒskpqoqrsuxƒ€‚‹‹Š‹‡ƒ‹Œ’‹¹ÅÂÃÃÇ|fgksoqroxz‚…Œ…Œ†…}ž²ÁÇÁÁ»Á¢}ejnonqvxz}€Š‡‹‹ƒ‚vz¦»¿¼¼À¾º¼Èlkhlopmuw~€†ˆ‰‡†Œ€|q„±»¹º»º¯µÃÆ·hfinspsvv‚‹…‚‚‹|rq”±³¼°¯·´½¹ÀÃ¬kejjuptt{ƒ|}t††|vs ²¶¢«µ¬¯µ¹½¾¾Ÿaegnojs~‚{v{‡|~nt¨±¬¤«ªª¶µ°¿¿¸º
+
+
+msg: [fnpqpnkfcbejmlib\XWX[\]\ZYYXY\enx~€‚‚‚€}yxwxxvrmjiijklllllmmoty†ŠŒŽ‰…ƒ|xuuuwxxxxxyz{|‚‡ŠŽ’•——•‹ˆ„~zxy{}€€‚„†‰ŒŽ’–˜˜•‘‹‡„€}zxy{}€€‚ƒ†ˆ‹ŒŽŽ’•˜˜–‘Œˆ„€}ywxz|~€‚ƒ…‡‰‹ŒŽ’•˜˜–’Œˆ„€|ywxz|~~~~€‚ƒ…‡‰‹‘”——–‘Œˆ„€|ywwy|~€‚‚ƒ„†‰‹‘”—˜–’ˆ„€|xvwy{}~€‚‚„‡ŠŒŽ“–˜—“Ž‰„€|xvvxz}~€€‚†‰ŒŽ“–˜˜”‰„€{xvvwz}~~€~}€„ˆ‹’•˜˜•‰„€{xuuwz}~€€~}ƒˆ‹’•˜˜•Š„€{wuuwz}€€~||~ƒˆ‹‘•˜™–‘‹…{wuuwz}€€€~{{~ƒˆŒ‘•˜™—“Œ†€{wuuwz|~€€|zy}‚‡‹Ž”—™—“Œ†€{wutvy|€€‚‚€}zz}ƒˆ‹Ž”˜š˜”†€{wuuwz}€~{yy|‚ˆ‹Ž”—š™•Ž‡€{wutvy|€€}zxy}ƒˆ‹Ž“—šš–ˆ{wutvy|~€€~{wvw{‚‡ŠŒ’–™™–ˆ{wutvy|~€‚{wvw|ƒˆ‹ŒŽ’–™™–ˆ|wutvy|€€}yutv{‚‡‹ŒŽ‘•™š—‘‰‚{wtsux{~€|yutw|‚‡‹ŒŽ‘•™š˜’‹ƒ|wtstw{~€€€}zvssv{‚‡ŠŒŒ”—™—’Šƒ|wtstw{~€€~zwttw|ƒˆ‹ŒŒ”˜™˜“‹ƒ|wtstw{~€€|xtrsv|‚ˆ‹ŒŒ“—™˜”Œ„}wtstwz}~{wtrrw|ƒˆ‹ŒŒ“—š™•Ž…}wtstwz|~~|xtqoqu{‚‡ŠŒŒ’–™™•Ž…}wtstvy|~~|yurqsw|ƒˆ‹ŒŒ’–™™–†~xtsuwz|~}zvspoqu|‚ˆ‹’•™™–‡xtstvy|}|yurpprv|ƒˆŒ‘•™š˜‘‰€ytstvy{|zvronnqu{‚ˆ‹Ž”—™—‘ˆxtstvy{|zvrpppsw}
+msg: Ÿ†4(GTfJ`.=?J&)`9*0'(^x·¬ÂÄ³¿[PˆDA`IcIQy)A6X,(+oH+',‡¦©³È¿¿V>0„:)S<J1;kd-0,=K+,1/90t{¶´ºËÈgO021&QB>;CSdv)11+W.+1()<e¢žµÇÈ~vpW4,]d7<NSbV„>..+18-2&%Š§µÇÆzz|Ž…ddJE'TEF]swg2,-.,4)!Wmµ¬ÀÊrs…‰Ž‹‚o89CeSg€`8,1-10&'Œ‹§¶Îsb|Š”••“eEW&3P=…_Wh+..+32'ni­¹ËƒUr€‰—œ££^n1'4__XoVK62*/,8‡´Ã ;fwŠ•›¥¦…=3,,3NZT"px:..-)so¬ÀÅ)Jmy€ˆ“™£«?@/1/36<B q‚J*'+4‰ÀÇJ/Qs{†–«K;061/1>9*mo)#"on²ÇŽ&5Pqzƒ†“˜ e5;7*-/H<@krl"*†€ÍÉ&+=Okx‚…Œ”šžm383%+Am8eš£1M`t¨ÒH$-EKk{ƒ‰’—šK</01+NHviJ\').|~Ç| '1POfv„‡Ž”—LW5=1'EwQ}E)(+œ†€¨U%)5[Khx‡Ž–pr,5G!33>b/("d¯²¹n$&-5\Qiw€‡‹–i,2G@$,s@21,†ª·‹*,.5gXlv|…‹‘”€vH/R˜4S4^w’fz¹"(D4+8pVpx}‚‡Ž‘\€y9Ki887€‹´kl»H46<;1;p\p|…‹ŽLs‹ElG&9{™²œ[~g(0/2B0.m`ox~€ƒˆŒ‹@jx|](Sfp ¼]`ˆ":614H1+e^kx€ƒ‰Ž‹^8fˆB>y¶³Äm_Ÿ*&Y/06K5+^\au‚ˆ‰Bfe^W‚¾Ò~eŽT-,@-/:A;)ZXXq~ƒ‡h[gJ
