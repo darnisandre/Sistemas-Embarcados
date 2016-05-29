@@ -107,7 +107,7 @@ void putPart(uint8_t *buf, int part){
 	int col = part % (width/block_width);
 	int line = part / (width/block_width);
 	int i= 0;
-	printf("oi %d,%d,%d\n",part,col,line);
+	
 	for(;i<block_width; i++){
 		int j = 0;
 		for(;j<block_width; j++){
@@ -122,8 +122,8 @@ void putPart(uint8_t *buf, int part){
 void master(void){
 	uint8_t *buf = (uint8_t *) malloc(block_area);
 	int i;
-	for(i = 1; i <= (width/block_width) * (height/block_width); i++){
-		copyPart(buf,i-1);
+	for(i = 0; i < (width/block_width) * (height/block_width); i++){
+		copyPart(buf,i);
 		HF_Send(HF_Core( (i%(num_cpu -1)) + 1), 2, buf, block_area );
 	}
 	sleep(2000);
@@ -167,15 +167,15 @@ void do_gausian(uint8_t *img){
 				if (x > 2 || x < block_width-2){
 					for(v=0;v<7;v++)
 						for(u=0;u<7;u++)
-							image_buffer[v][u] = image[(((y+v-3)*block_width)+(x+u-3))];
+							image_buffer[v][u] = img[(((y+v-3)*block_width)+(x+u-3))];
 
 					img[((y*block_width)+x)] = gausian(image_buffer);
 				}else{
-					img[((y*block_width)+x)] = image[((y*block_width)+x)];
+					img[((y*block_width)+x)] = img[((y*block_width)+x)];
 				}
 			}
 		}else{
-			img[((y*block_width)+x)] = image[((y*block_width)+x)];
+			img[((y*block_width)+x)] = img[((y*block_width)+x)];
 		}
 	}
 }
@@ -186,9 +186,7 @@ void slave(void){
 	uint8_t *buf = (uint8_t *) malloc(block_area);
 	while(1){
 		HF_Receive(&source_cpu, &source_id, buf,block_area);
-		printf("\nmsg: %s\n\n", buf);
 		do_gausian(buf);
-		printf("\nmsg: %s", buf);
 		HF_Send(HF_Core(0), HF_CurrentCpuId() + 2, buf, block_area );
 		//Return to master
 	}
