@@ -4,6 +4,6 @@ make filter
 rm ../mpsoc_sim/objects/*
 rm ../mpsoc_sim/reports/*
 cp code*.bin ../mpsoc_sim/objects/
-cd ~/Desktop/Sistemas-Embarcados/mpsoc_sim
+cd ../mpsoc_sim
 ./mpsoc_sim 7 s
-cd ~/Desktop/Sistemas-Embarcados/hellfire_lite
+cd ../hellfire_lite

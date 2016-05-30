@@ -4,6 +4,8 @@
 #define block_width 32
 #define block_area 1024 //32*32
 
+semaphore sem[num_cpu-1];
+
 
 uint8_t gausian(uint8_t buffer[7][7]){
 	int32_t sum=0, mpixel;
@@ -23,70 +25,6 @@ uint8_t gausian(uint8_t buffer[7][7]){
 
 	return (uint8_t)mpixel;
 }
-
-/*void do_gausian(uint8_t *img){
-	int32_t x,y,u,v;
-	uint8_t image_buffer[7][7];
-	
-	for(y=0;y<height;y++){
-		if (y > 2 || y < height-2){
-			for(x=0;x<width;x++){
-				if (x > 2 || x < width-2){
-					for(v=0;v<7;v++)
-						for(u=0;u<7;u++)
-							image_buffer[v][u] = image[(((y+v-3)*width)+(x+u-3))];
-
-					img[((y*width)+x)] = gausian(image_buffer);
-				}else{
-					img[((y*width)+x)] = image[((y*width)+x)];
-				}
-			}
-		}else{
-			img[((y*width)+x)] = image[((y*width)+x)];
-		}
-	}
-}*/
-/*
-void task(void){
-	uint32_t x,y,z;
-	uint8_t *img;
-	uint32_t time;
-	
-	while(1) {
-		img = (uint8_t *) malloc(height * width);
-		if (img == NULL){
-			printf("\nmalloc() failed!\n");
-			for(;;);
-		}
-
-		printf("\n\nstart of processing!\n\n");
-
-		time = MemoryRead(COUNTER_REG);
-
-		do_gausian(img);
-
-		time = MemoryRead(COUNTER_REG) - time;
-
-		printf("done in %d clock cycles.\n\n", time);
-
-		printf("\n\nint32_t width = %d, height = %d;\n", width, height);
-		printf("uint8_t image[] = {\n");
-		for(y=0;y<height;y++){
-			for(x=0;x<width;x++){
-				printf("0x%x", img[y*width+x]);
-				if ((y < height-1) || (x < width-1)) printf(", ");
-				if ((++z % 16) == 0) printf("\n");
-			}
-		}
-		printf("};\n");
-
-		free(img);
-
-		printf("\n\nend of processing!\n");
-		HF_Panic(0);
-	}
-		
-}*/
 
 void copyPart(uint8_t *buf, int part){
 	int col = part % (width/block_width);
@@ -126,7 +64,10 @@ void master(void){
 		copyPart(buf,i);
 		HF_Send(HF_Core( (i%(num_cpu -1)) + 1), 2, buf, block_area );
 	}
-	sleep(2000);
+
+	for(;i<num_cpu-1;i++){
+		HF_SemWait(&sem[i]);
+	}
 
 	int x,y,z;
 	printf("done\n\n");
@@ -154,6 +95,9 @@ void masterReceiver(void){
 		HF_Receive(&source_cpu, &source_id, buf,block_area);
 		putPart( buf, (source_cpu-1) + i * (num_cpu -1) );
 	}
+
+	HF_SemPost(&sem[source_cpu-1]);
+
 	while(1);
 }
 
@@ -188,12 +132,17 @@ void slave(void){
 		HF_Receive(&source_cpu, &source_id, buf,block_area);
 		do_gausian(buf);
 		HF_Send(HF_Core(0), HF_CurrentCpuId() + 2, buf, block_area );
-		//Return to master
 	}
 }
 
 void ApplicationMain(void) {
 #if CPU_ID == 0
+	int i=0;
+	for(;i<num_cpu-1;i++){
+		HF_SemInit(&sem[i],0);
+	}
+
+
 	HF_AddTask(master, "master", 2048, 10, 0);
 	HF_AddTask(masterReceiver, "masterReceiver1", 2048, 10, 0);
 	HF_AddTask(masterReceiver, "masterReceiver2", 2048, 10, 0);
