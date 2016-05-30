@@ -82,7 +82,7 @@ int32_t main(void){
 	int32_t width, height;
 	int32_t x,y,z=0;
 
-	load_bmp(&width, &height, "recruta.bmp");
+	load_bmp(&width, &height, "lena_gray.bmp");
 
 	printf("int32_t width = %d, height = %d;\n", width, height);
 

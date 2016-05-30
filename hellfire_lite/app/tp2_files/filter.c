@@ -60,6 +60,13 @@ void putPart(uint8_t *buf, int part){
 void master(void){
 	uint8_t *buf = (uint8_t *) malloc(block_area);
 	int i;
+
+	uint32_t x,y,z;
+	uint32_t time;
+	printf("\n\nstart of processing!\n\n");
+
+	time = MemoryRead(COUNTER_REG);
+
 	for(i = 0; i < (width/block_width) * (height/block_width); i++){
 		copyPart(buf,i);
 		HF_Send(HF_Core( (i%(num_cpu -1)) + 1), 2, buf, block_area );
@@ -69,8 +76,9 @@ void master(void){
 		HF_SemWait(&sem[i]);
 	}
 
-	int x,y,z;
-	printf("done\n\n");
+	time = MemoryRead(COUNTER_REG) - time;
+
+	printf("done in %d clock cycles.\n\n", time);
 
 	printf("\n\nint32_t width = %d, height = %d;\n", width, height);
 	printf("uint8_t image[] = {\n");
