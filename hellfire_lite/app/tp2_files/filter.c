@@ -1,9 +1,11 @@
 #include <prototypes.h>
 #include "image.h"
 #define num_cpu  9
-#define block_width 32
-#define block_area 1024 //32*32
-#define BLOCK_PER_SLAVE 2
+#define block_width 22
+#define copy_part 16
+#define copy_border 3
+#define block_area 484
+#define BLOCK_PER_SLAVE 8
 
 semaphore sem[num_cpu-1];
 
@@ -27,32 +29,43 @@ uint8_t gausian(uint8_t buffer[7][7]){
 	return (uint8_t)mpixel;
 }
 
+
 void copyPart(uint8_t *buf, int part){
-	int col = part % (width/block_width);
-	int line = part / (width/block_width);
+	int col = part % (width/copy_part);
+	int line = part / (width/copy_part);
 	int i= 0;
-	printf("oi %d,%d,%d\n",part,col,line);
 	for(;i<block_width; i++){
 		int j = 0;
 		for(;j<block_width; j++){
-			int coluna = col*block_width + j;
-			int linha = line*block_width +i;
+			int coluna = col*copy_part +j -copy_border;
+			int linha = line*copy_part +i -copy_border;
+			if(coluna < 0){
+				coluna = -coluna;
+			}else if(coluna >= width){
+				coluna = width - (coluna - width) - 1;
+			}
+			if(linha < 0){
+				linha = -linha;
+			}else if(linha >= height){
+				linha = height - (linha - height) - 1;
+			}
+
 			buf[i*block_width + j] = image[linha * width + coluna];
 		}
 	}
 }
 
 void putPart(uint8_t *buf, int part){
-	int col = part % (width/block_width);
-	int line = part / (width/block_width);
+	int col = part % (width/copy_part);
+	int line = part / (width/copy_part);
 	int i= 0;
 	
-	for(;i<block_width; i++){
+	for(;i<copy_part; i++){
 		int j = 0;
-		for(;j<block_width; j++){
-			int coluna = col*block_width + j;
-			int linha = line*block_width +i;
-			image[linha * width + coluna] = buf[i*block_width + j];
+		for(;j<copy_part; j++){
+			int coluna = col*copy_part +j;
+			int linha = line*copy_part +i;
+			image[linha * width + coluna] = buf[(i+copy_border)*block_width + (j+copy_border)];
 		}
 	}
 }
@@ -68,19 +81,18 @@ void master(void){
 
 	time = MemoryRead(COUNTER_REG);
 
-	for(i = 0; i < (width/block_width) * (height/block_width); i++){
+	for(i = 0; i < (width/copy_part) * (height/copy_part); i++){
 		copyPart(buf,i);
 		HF_Send(HF_Core( (i%(num_cpu -1)) + 1), 2, buf, block_area );
 	}
 
-	for(;i<num_cpu-1;i++){
+	for(i=0;i<num_cpu-1;i++){
 		HF_SemWait(&sem[i]);
 	}
 
 	time = MemoryRead(COUNTER_REG) - time;
 
 	printf("done in %d clock cycles.\n\n", time);
-
 	printf("\n\nint32_t width = %d, height = %d;\n", width, height);
 	printf("uint8_t image[] = {\n");
 	for(y=0;y<height;y++){
@@ -110,10 +122,9 @@ void masterReceiver(void){
 	while(1);
 }
 
-uint8_t *  do_gausian(uint8_t *img){
+void do_gausian(uint8_t *img, uint8_t *imgGausian){
 	int32_t x,y,u,v;
 	uint8_t image_buffer[7][7];
-	uint8_t *imgGausian = (uint8_t *) malloc(block_area);
 	
 	for(y=0;y<block_width;y++){
 		if (y > 2 || y < block_width-2){
@@ -132,17 +143,20 @@ uint8_t *  do_gausian(uint8_t *img){
 			imgGausian[((y*block_width)+x)] = img[((y*block_width)+x)];
 		}
 	}
-	return imgGausian;
 }
 
 void slave(void){
 	uint16_t source_cpu, status;
 	uint8_t source_id;
 	uint8_t *buf = (uint8_t *) malloc(block_area);
+	uint8_t *send = (uint8_t *) malloc(block_area);
 	int i =0;
 	for(;i<BLOCK_PER_SLAVE;i++){
 		HF_Receive(&source_cpu, &source_id, buf,block_area);
-		HF_Send(HF_Core(0), HF_CurrentCpuId() + 2, do_gausian(buf), block_area );
+		printf("recebi o bloco %d",i);
+		do_gausian(buf,send);
+		HF_Send(HF_Core(0), HF_CurrentCpuId() + 2, send, block_area );
+		printf("enviei o bloco %d",i);
 	}
 	while(1);
 }
