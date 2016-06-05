@@ -3,6 +3,7 @@
 #define num_cpu  9
 #define block_width 32
 #define block_area 1024 //32*32
+#define BLOCK_PER_SLAVE 2
 
 semaphore sem[num_cpu-1];
 
@@ -99,7 +100,7 @@ void masterReceiver(void){
 	uint8_t source_id;
 	uint8_t *buf = (uint8_t *) malloc(block_area);
 	int i =0;
-	for(;i<2;i++){
+	for(;i<BLOCK_PER_SLAVE;i++){
 		HF_Receive(&source_cpu, &source_id, buf,block_area);
 		putPart( buf, (source_cpu-1) + i * (num_cpu -1) );
 	}
@@ -109,9 +110,10 @@ void masterReceiver(void){
 	while(1);
 }
 
-void do_gausian(uint8_t *img){
+uint8_t *  do_gausian(uint8_t *img){
 	int32_t x,y,u,v;
 	uint8_t image_buffer[7][7];
+	uint8_t *imgGausian = (uint8_t *) malloc(block_area);
 	
 	for(y=0;y<block_width;y++){
 		if (y > 2 || y < block_width-2){
@@ -121,26 +123,28 @@ void do_gausian(uint8_t *img){
 						for(u=0;u<7;u++)
 							image_buffer[v][u] = img[(((y+v-3)*block_width)+(x+u-3))];
 
-					img[((y*block_width)+x)] = gausian(image_buffer);
+					imgGausian[((y*block_width)+x)] = gausian(image_buffer);
 				}else{
-					img[((y*block_width)+x)] = img[((y*block_width)+x)];
+					imgGausian[((y*block_width)+x)] = img[((y*block_width)+x)];
 				}
 			}
 		}else{
-			img[((y*block_width)+x)] = img[((y*block_width)+x)];
+			imgGausian[((y*block_width)+x)] = img[((y*block_width)+x)];
 		}
 	}
+	return imgGausian;
 }
 
 void slave(void){
 	uint16_t source_cpu, status;
 	uint8_t source_id;
 	uint8_t *buf = (uint8_t *) malloc(block_area);
-	while(1){
+	int i =0;
+	for(;i<BLOCK_PER_SLAVE;i++){
 		HF_Receive(&source_cpu, &source_id, buf,block_area);
-		do_gausian(buf);
-		HF_Send(HF_Core(0), HF_CurrentCpuId() + 2, buf, block_area );
+		HF_Send(HF_Core(0), HF_CurrentCpuId() + 2, do_gausian(buf), block_area );
 	}
+	while(1);
 }
 
 void ApplicationMain(void) {
